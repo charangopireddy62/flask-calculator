@@ -1,21 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Flask Calculator</title>
+    <style>
+        body { font-family: Arial; text-align: center; margin-top: 80px; }
+        input, select, button { font-size: 18px; padding: 6px; margin: 6px; }
+    </style>
 </head>
 <body>
-    <h1>Simple Calculator</h1>
+    <h1>🧮 Flask Calculator</h1>
+
     <form action="/calculate" method="post">
-        <input type="number" name="num1" required>
+        <input type="number" step="any" name="num1" placeholder="Enter first number" required>
         <select name="operation">
             <option value="add">+</option>
             <option value="sub">-</option>
             <option value="mul">*</option>
             <option value="div">/</option>
         </select>
-        <input type="number" name="num2" required>
+        <input type="number" step="any" name="num2" placeholder="Enter second number" required>
         <button type="submit">Calculate</button>
     </form>
+
     {% if result is not none %}
         <h2>Result: {{ result }}</h2>
     {% endif %}
