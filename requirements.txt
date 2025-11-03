@@ -1,0 +1,17 @@
+# Core Flask framework
+Flask==3.0.0
+
+# For handling environment variables (optional but useful)
+python-dotenv==1.0.1
+
+# For form handling and validation (if you later use forms)
+Flask-WTF==1.2.1
+
+# For REST API development (optional, if you add APIs)
+Flask-RESTful==0.3.10
+
+# For structured logging (optional)
+gunicorn==21.2.0
+
+# For numerical calculations (if your calculator uses them)
+numpy==1.26.4
